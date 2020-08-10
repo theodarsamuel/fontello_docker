@@ -3,7 +3,7 @@ MAINTAINER Avner Cohen "israbirding@gmail.com"
 
 # make sure the package repository is up to date
 RUN apt-get update && apt-get upgrade -y && \
-    apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list && \
+    apt-key adv --keyserver keyserver.ubuntu.com:80 --recv 7F0CEB10 && echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/mongodb.list && \
     apt-get update && apt-get install -y mongodb-org build-essential git curl zip inotify-tools python
 
 ENV NODE_VERSION 8.14.0
