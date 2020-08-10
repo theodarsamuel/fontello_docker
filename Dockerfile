@@ -12,7 +12,7 @@ RUN curl https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x6
 # INSTALL YARN
 RUN npm install -g yarn
 
-ENV FONTELLO_VERSION 7.1.0
+ENV FONTELLO_VERSION 8.0.0
 RUN git clone --depth 1 -b "${FONTELLO_VERSION}" git://github.com/fontello/fontello.git fontello && ( cd fontello && git submodule update --init && yarn install ) && \
     mkdir -p /data/db
 
